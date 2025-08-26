@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Mail, Phone, MapPin, Github, Linkedin, Calendar, Building } from "lucide-react";
-import profileImage from "figma:asset/1405a83f9be0643a167da61d5d48e7c0fc280b6f.png";
+import profileImage from "../assets/1405a83f9be0643a167da61d5d48e7c0fc280b6f.png";
 
 export function OnePageResume() {
   return (
