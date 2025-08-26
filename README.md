@@ -4,4 +4,4 @@
 
 ## 🌐 사이트
 
-🔗 [parkjaeheung.vercel.app](https://parkjaeheung.vercel.app)
+🔗 [parkjaeheung.vercel.app](https://parkjaeheung-cv.vercel.app/)
