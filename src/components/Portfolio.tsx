@@ -2,20 +2,20 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Mail, Phone, MapPin, Github, Linkedin, Calendar, Building, ExternalLink, Code, Database, Brain, TrendingUp, Users, Globe, MessageSquare, FileText, BarChart3, Sparkles, Network, CalendarClock, Workflow, Layers, Filter } from "lucide-react";
-import profileImage from "figma:asset/1405a83f9be0643a167da61d5d48e7c0fc280b6f.png";
-import shapSummaryPlot from "figma:asset/shap_summary_plot.jpg";
-import shapForcePlot from "figma:asset/shap_force_plot.jpg";
-import mediapipeImg from "figma:asset/mediapipe.jpg";
-import logLikelihoodImg from "figma:asset/Log-likelihood graph.jpg";
-import forecastingImg from "figma:asset/forecasting.jpg";
-import hitmapImg from "figma:asset/hitmap.jpg";
-import miraeassetImg from "figma:asset/miraeasset.jpg";
-import agentImg from "figma:asset/agent.jpg";
-import skillImg from "figma:asset/skill.jpg";
-import gleeImg from "figma:asset/glee.jpg";
-import architectureImg from "figma:asset/Architecture.jpg";
-import bestmodelImg from "figma:asset/bestmodel.jpg";
-import pwc from "figma:asset/pwc.jpg";
+import profileImage from "../assets/1405a83f9be0643a167da61d5d48e7c0fc280b6f.png";
+import shapSummaryPlot from "../assets/shap_summary_plot.jpg";
+import shapForcePlot from "../assets/shap_force_plot.jpg";
+import mediapipeImg from "../assets/mediapipe.jpg";
+import logLikelihoodImg from "../assets/Log-likelihood graph.jpg";
+import forecastingImg from "../assets/forecasting.jpg";
+import hitmapImg from "../assets/hitmap.jpg";
+import miraeassetImg from "../assets/miraeasset.jpg";
+import agentImg from "../assets/agent.jpg";
+import skillImg from "../assets/skill.jpg";
+import gleeImg from "../assets/glee.jpg";
+import architectureImg from "../assets/Architecture.jpg";
+import bestmodelImg from "../assets/bestmodel.jpg";
+import pwc from "../assets/pwc.jpg";
 
 // StatCard 컴포넌트 정의
 const StatCard = ({ icon: Icon, label, value, sub }: { icon: any; label: string; value: string; sub: string }) => (
