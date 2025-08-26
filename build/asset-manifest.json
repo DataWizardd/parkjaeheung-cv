@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/parkjaeheung-cv/static/css/main.15bacf2b.css",
+    "main.js": "/parkjaeheung-cv/static/js/main.3c5e419a.js",
+    "index.html": "/parkjaeheung-cv/index.html",
+    "main.15bacf2b.css.map": "/parkjaeheung-cv/static/css/main.15bacf2b.css.map",
+    "main.3c5e419a.js.map": "/parkjaeheung-cv/static/js/main.3c5e419a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15bacf2b.css",
+    "static/js/main.3c5e419a.js"
+  ]
+}
