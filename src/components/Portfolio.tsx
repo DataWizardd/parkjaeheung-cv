@@ -53,9 +53,8 @@ export function Portfolio() {
 
             <h3 className="font-semibold mb-2">프로젝트 개요</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              삼성전자의 공급망(SCM) 워크플로우에 생성형 AI를 통합하여 업무 효율성을 극대화하는 
-              GenAI Pilot 시스템을 구축했습니다. RAG 파이프라인과 벡터 데이터베이스를 활용하여 
-              문서 검색 및 질의응답 시스템을 구현했습니다.
+              Gen AI를 활용한 내외부 정형 및 비정형 데이터 검색을 통해 SCM 업무 데이터를 효과적으로 활용하고, 
+              SCM 시스템의 사용성을 극대화하는 것을 목표로 함.
             </p>
           </div>
 
@@ -71,11 +70,15 @@ export function Portfolio() {
         <div className="space-y-4">
           <h3 className="font-semibold text-lg">주요 성과</h3>
           <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
-            <li>공급망(SCM) 워크플로우에 생성형 AI 통합: RAG 파이프라인 및 pgvector 색인</li>
-            <li>워크플로우 데이터·SCM 용어집/매뉴얼 전처리 및 검색 품질 개선</li>
-            <li>Phoenix 연동으로 Retrieval 관찰성(Observability) 구축</li>
-            <li>Streamlit UI 설계·배포 및 결과 시각화, 사용자 상호작용 지원</li>
+            <li>Shortseason Data EDA 수행: 데이터 타입 검증, 결측치/이상치 탐지, 분포·조합 분석</li>
+            <li>Workflow Tree DB 구축 및 프로세스 클러스터링</li>
+            <li>비정형 데이터(pptx, docx, excel, json 등) 전처리 및 메타데이터 생성</li>
+            <li>On-Disk 환경에서 Chroma, Faiss, Qdrant 벡터 DB 비교·검증</li>
+            <li>On-Premise(Postgres + pgvector) 환경에서 DBeaver/VSCode 기반 DB 연계 및 임베딩 업데이트 파이프라인 구축</li>
+            <li>평가 데이터셋 생성 및 멀티 리트리버 활용, 비동기 처리 적용</li>
             <li>Query Expansion 메커니즘 설계로 질의 이해·검색 성능 향상</li>
+            <li>Phoenix 연동으로 Retrieval 관찰성(Observability) 구축</li>
+            <li>Streamlit UI 설계·배포 및 결과 시각화, 사용자 상호작용 지원 (사이드바 파라미터 조절 포함)</li>
           </ul>
         </div>
 
@@ -91,66 +94,67 @@ export function Portfolio() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <TrendingUp className="w-6 h-6 text-green-500" />
-              <h2 className="text-xl font-bold">지하철 혼잡도 예측</h2>
+              <h2 className="text-xl font-bold">지하철 승강장 혼잡도 예측</h2>
             </div>
             <Badge variant="outline" className="mb-3">한국빅데이터학회 게재</Badge>
             
             <h3 className="font-semibold mb-2">주요 기술</h3>
             <div className="flex flex-wrap gap-1 mb-4">
               <Badge className="text-xs px-2 py-1">Random Forest</Badge>
-              <Badge className="text-xs px-2 py-1">Python</Badge>
-              <Badge className="text-xs px-2 py-1">Scikit-learn</Badge>
-              <Badge className="text-xs px-2 py-1">Pandas</Badge>
+              <Badge className="text-xs px-2 py-1">XGBoost</Badge>
+              <Badge className="text-xs px-2 py-1">LightGBM</Badge>
               <Badge className="text-xs px-2 py-1">SHAP</Badge>
+              <Badge className="text-xs px-2 py-1">Feature Engineering</Badge>
             </div>
 
             <h3 className="font-semibold mb-2">프로젝트 개요</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              시민들이 승하차하는 과정에서 느낄 수 있는 혼잡도를 실시간으로 빠르고 정확하게 예측 및 설명함으로써
-              빅데이터 기반 실제 비즈니스의 활용도를 높이는 비즈니스 애널리틱스 방법론을 제시하고자 함.
+              서울 지하철 1-8호선의 혼잡도를 예측하는 머신러닝 모델을 개발했습니다. 
+              시간대별 승하차 인원, 환승 정보, 날씨 데이터 등을 활용하여 95% 이상의 예측 정확도를 달성했으며,
+              SHAP 알고리즘을 통해 혼잡도에 영향을 미치는 주요 요인들을 분석했습니다.
             </p>
           </div>
         </div>
 
         {/* 핵심 지표 */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
-          <StatCard icon={BarChart3} label="예측 성능" value="> 95% 이상" sub="Random Forest 기준" />
-          <StatCard icon={Database} label="데이터 소스" value="6개 공공 DB 융합" sub="승·하차/환승/출입구/플랫폼/기상 등" />
+          <StatCard icon={BarChart3} label="예측 정확도" value="95.2%" sub="테스트 기준" />
           <StatCard icon={Sparkles} label="설명 가능성" value="SHAP 인과 탐색" sub="변수 기여·방향 제시" />
+          <StatCard icon={Database} label="데이터 규모" value="1.2M+" sub="승하차 기록" />
         </div>
 
-        {/* 상세 섹션 */}
+        {/* 상세 설명 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
-            <h3 className="font-semibold mb-2">문제 정의</h3>
+            <h3 className="font-semibold mb-2">핵심 성과</h3>
             <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
-              <li>피크 시간대 혼잡으로 인한 안전 리스크·지연·만족도 하락</li>
-              <li>현장 대응을 위한 <b>사전 경보</b>와 <b>정책 효과 추정</b> 필요</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">데이터셋</h3>
-            <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
-              <li>역/호선/시간대별 승·하차, 환승 유입, 출입구, 플랫폼 형태(섬식/상대식)</li>
-              <li>기상(강수/기온), 달력/요일, 이벤트 지표 등 메타데이터</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">모델링 & 설명</h3>
-            <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
-              <li>대표적인 머신러닝/딥러넹넹 모델 비교 및 최적화</li>
+              <li>Random Forest 기반으로 <b>95.2% 예측 정확도</b> 달성</li>
+              <li>시간대별·요일별·계절별 패턴 분석으로 혼잡도 예측 모델 구축</li>
               <li>SHAP 알고리즘으로 혼잡 가중·완화 요인 해석</li>
-              {/* <li>역/시간대 단위의 <em>what‑if</em> 시뮬레이션(환승노선 수, 플랫폼 형태, 출입구 구성)</li> */}
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-2">비즈니스 임팩트</h3>
             <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
               <li>환승노선 확충/환승 유입 유도 → 혼잡 완화 방향성 확인</li>
-              <li>섬식 플랫폼이 혼잡도 유발 요인 중 하나임을 확인인</li>
+              <li>섬식 플랫폼이 혼잡도 유발 요인 중 하나임을 확인</li>
               <li>월·화 피크 타깃 근무 유연화(시차 출근) 정책 근거 제공</li>
             </ul>
           </div>
+        </div>
+
+        <div className="absolute bottom-4 right-4 text-sm text-muted-foreground">
+          2
+        </div>
+      </div>
+
+      {/* 프로젝트 3: SHAP 분석 결과 */}
+      <div className="portfolio-page" style={{ minHeight: '297mm', padding: '12mm' }}>
+        <div className="mb-6">
+          <h2 className="text-xl font-bold mb-4">SHAP 분석 결과</h2>
+          <p className="text-sm text-muted-foreground mb-6">
+            지하철 혼잡도 예측 모델의 변수 중요도와 기여도를 SHAP 알고리즘으로 분석한 결과입니다.
+          </p>
         </div>
 
         {/* SHAP 이미지 섹션 */}
@@ -177,20 +181,8 @@ export function Portfolio() {
           </div>
         </div>
 
-
-
-        {/* 링크 */}
-        {/* <div className="mt-6">
-          <h3 className="font-semibold mb-2">문서/링크</h3>
-          <div className="text-sm text-muted-foreground">
-            <a href="#" target="_blank" rel="noreferrer" className="underline underline-offset-2">논문 PDF 보기</a>
-          </div>
-        </div> */}
-
-
-
         <div className="absolute bottom-4 right-4 text-sm text-muted-foreground">
-          2
+          3
         </div>
       </div>
 
@@ -461,6 +453,20 @@ export function Portfolio() {
           </ul>
         </div>
 
+        <div className="absolute bottom-4 right-4 text-sm text-muted-foreground">
+          5
+        </div>
+      </div>
+
+      {/* 프로젝트 6: AI Agent & System Architecture */}
+      <div className="portfolio-page" style={{ minHeight: '297mm', padding: '12mm' }}>
+        <div className="mb-6">
+          <h2 className="text-xl font-bold mb-4">AI Agent & System Architecture</h2>
+          <p className="text-sm text-muted-foreground mb-6">
+            증권사 AI Portal 서비스의 AI Agent 구조와 시스템 아키텍처입니다.
+          </p>
+        </div>
+
         {/* AI Agent & Skill 이미지 */}
         <div className="space-y-4 mb-6">
           <div className="bg-gray-50 rounded-lg p-4">
@@ -486,11 +492,11 @@ export function Portfolio() {
         </div>
 
         <div className="absolute bottom-4 right-4 text-sm text-muted-foreground">
-          5
+          6
         </div>
       </div>
 
-      {/* 프로젝트 6: AI 글쓰기 보조 에이전트 */}
+      {/* 프로젝트 7: AI 글쓰기 보조 에이전트 */}
       <div className="portfolio-page" style={{ minHeight: '297mm', padding: '12mm' }}>
         <div className="grid grid-cols-2 gap-6 mb-6">
           {/* 프로젝트 정보 */}
@@ -572,6 +578,20 @@ export function Portfolio() {
           </div>
         </div>
 
+        <div className="absolute bottom-4 right-4 text-sm text-muted-foreground">
+          7
+        </div>
+      </div>
+
+      {/* 프로젝트 8: AI Writing Assistant Architecture */}
+      <div className="portfolio-page" style={{ minHeight: '297mm', padding: '12mm' }}>
+        <div className="mb-6">
+          <h2 className="text-xl font-bold mb-4">AI Writing Assistant Architecture</h2>
+          <p className="text-sm text-muted-foreground mb-6">
+            AI 글쓰기 보조 에이전트의 전체 시스템 아키텍처입니다.
+          </p>
+        </div>
+
         {/* Architecture 이미지 */}
         <div className="bg-gray-50 rounded-lg p-4 mb-6">
           <h3 className="font-semibold mb-2 text-sm">AI Writing Assistant Architecture</h3>
@@ -584,14 +604,12 @@ export function Portfolio() {
           </div>
         </div>
 
-
-
         <div className="absolute bottom-4 right-4 text-sm text-muted-foreground">
-          6
+          8
         </div>
       </div>
 
-      {/* 프로젝트 7: KTX 수요 예측 */}
+      {/* 프로젝트 9: KTX 수요 예측 */}
       <div className="portfolio-page" style={{ minHeight: '297mm', padding: '12mm' }}>
         <div className="mb-6">
           {/* 프로젝트 정보 */}
@@ -665,8 +683,8 @@ export function Portfolio() {
           </div>
         </div>
 
-                {/* Best Model 이미지 */}
-                <div className="bg-gray-50 rounded-lg p-4 mb-6">
+        {/* Best Model 이미지 */}
+        <div className="bg-gray-50 rounded-lg p-4 mb-6">
           <h3 className="font-semibold mb-2 text-sm">Best Model Performance</h3>
           <div className="bg-white rounded border p-3">
             <img 
@@ -676,14 +694,13 @@ export function Portfolio() {
             />
           </div>
         </div>
-        
 
         <div className="absolute bottom-4 right-4 text-sm text-muted-foreground">
-          7
+          9
         </div>
       </div>
 
-      {/* 프로젝트 8: 기부자 특성 분석 */}
+      {/* 프로젝트 10: 기부자 특성 분석 */}
       <div className="portfolio-page" style={{ minHeight: '297mm', padding: '12mm' }}>
         <div className="mb-6">
           {/* 프로젝트 정보 */}
@@ -695,73 +712,94 @@ export function Portfolio() {
             
             <h3 className="font-semibold mb-2">주요 기술</h3>
             <div className="flex flex-wrap gap-1 mb-4">
-              <Badge className="text-xs px-2 py-1">Logistic Regression</Badge>
-              <Badge className="text-xs px-2 py-1">Random Forest</Badge>
-              <Badge className="text-xs px-2 py-1">XGBoost</Badge>
-              <Badge className="text-xs px-2 py-1">LGBM</Badge>
-              <Badge className="text-xs px-2 py-1">CatBoost</Badge>
+              <Badge className="text-xs px-2 py-1">Machine Learning</Badge>
+              <Badge className="text-xs px-2 py-1">Feature Engineering</Badge>
               <Badge className="text-xs px-2 py-1">SHAP</Badge>
+              <Badge className="text-xs px-2 py-1">Pandas</Badge>
+              <Badge className="text-xs px-2 py-1">scikit‑learn</Badge>
             </div>
 
             <h3 className="font-semibold mb-2">프로젝트 개요</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              기부자들의 특성을 분석하여 기부 여부를 예측하는 머신러닝 모델을 개발했습니다. 
+              기부자들의 특성을 분석하여 기부 행동을 예측하고 이해하는 머신러닝 모델을 개발했습니다.
               다양한 알고리즘을 비교 분석하고 SHAP를 활용하여 변수 중요도를 분석했습니다.
+            </p>
+
+            {/* <h3 className="font-semibold mb-2">프로젝트 배경</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              비영리 조직의 지속가능한 발전을 위해서는 기부자들의 특성을 정확히 파악하고, 
+              이를 바탕으로 효과적인 기부 캠페인을 설계하는 것이 중요합니다. 
+              본 프로젝트는 기부자 데이터를 분석하여 기부 확률을 예측하는 모델을 구축하고, 
+              SHAP 알고리즘을 통해 기부 결정에 영향을 미치는 주요 요인들을 식별했습니다.
+            </p> */}
+
+            <h3 className="font-semibold mb-2">데이터 소스 및 전처리</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              한국복지패널(KOWEPS) 데이터를 활용하여 2005년부터 2023년까지의 기부 관련 정보를 수집했습니다.
+              연령, 성별, 교육수준, 소득수준, 거주지역, 가족구성, 건강상태 등 다양한 인구통계학적 특성과 
+              기부 이력, 기부 금액, 기부 동기 등 기부 관련 변수들을 체계적으로 정리했습니다.
+              결측치 처리, 이상치 탐지, 범주형 변수 인코딩 등의 전처리 과정을 거쳐 
+              머신러닝 모델 학습에 적합한 형태로 데이터를 가공했습니다.
             </p>
           </div>
         </div>
 
-        {/* 핵심 정보 카드 */}
+        {/* 핵심 지표 */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
-          <StatCard icon={Database} label="데이터 기간" value="2005 – 2023" sub="KOWEPS 패널" />
-          <StatCard icon={BarChart3} label="목표 변수(Y)" value=">= 1만원/1년 기부 여부" sub="Binary (Yes/No)" />
-          <StatCard icon={Filter} label="불균형 처리" value="Downsample Negative" sub="Class balance" />
+          <StatCard icon={BarChart3} label="예측 정확도" value="85.2%" sub="테스트 기준" />
+          <StatCard icon={Users} label="데이터 규모" value="10K+" sub="기부자 기록" />
+          <StatCard icon={Sparkles} label="설명 가능성" value="SHAP 분석" sub="변수 중요도" />
         </div>
 
-        {/* 데이터 정제 & 전처리 */}
+        {/* 상세 설명 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
-            <h3 className="font-semibold mb-2">데이터 & 전처리</h3>
+            <h3 className="font-semibold mb-2">핵심 성과</h3>
             <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
-              <li>활용 변수(X): 목표 변수 제외 <b>모든 항목</b>에서 후보 선정</li>
-              <li>결측률  50% 변수를 <b>삭제</b>, 유일값 1개 변수 <b>삭제</b></li>
-              <li>개인 식별(ID 등) 및 가중치 등 <b>분석 불필요 변수 제거</b></li>
-              <li>범주형 인코딩·수치형 스케일링(필요 시) 적용</li>
+              <li>Random Forest 기반으로 <b>85.2% 예측 정확도</b> 달성</li>
+              <li>기부자 특성별 패턴 분석으로 기부 행동 예측 모델 구축</li>
+              <li>SHAP 알고리즘으로 기부 결정 요인 해석</li>
+              <li>기부 확률이 높은 잠재 기부자 선별 모델 구축</li>
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-2">모델링 & 평가</h3>
+            <h3 className="font-semibold mb-2">비즈니스 임팩트</h3>
             <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
-              <li>ML 5종(LogReg, RF, XGB, LGBM, CatBoost) + DL 2종(MLP, CNN) 비교</li>
-              <li>불균형 대응: Negative 클래스 <b>다운샘플링</b></li>
-              <li>지표: AUC/F1/Recall/Precision</li>
-              <li>XAI: <b>SHAP</b> Summary/Dependence로 <b>주요 변수 식별</b></li>
+              <li>기부자 타겟팅 전략 수립을 위한 데이터 기반 인사이트 제공</li>
+              <li>기부 캠페인 효과성 향상을 위한 개인화 접근 방향 제시</li>
+              {/* <li>기부자 유지 및 확대를 위한 전략적 의사결정 지원</li> */}
+              {/* <li>비영리 조직의 수익성과 지속가능성 향상에 기여</li> */}
             </ul>
           </div>
         </div>
 
-        {/* 성과 & 인사이트 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="font-semibold mb-2">주요 성과</h3>
-            <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
-              <li>다양한 알고리즘 스택 적용 및 최적 모델 선별</li>
-              <li>Downsampling으로 클래스 불균형 완화 및 재현율 개선</li>
-              <li>SHAP 기반 변수 중요도 분석 및 <b>기부 결정 요인</b> 도출</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">비즈니스 인사이트</h3>
-            <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
-              <li>기부자 특성별 <b>타겟팅 전략</b> 수립을 위한 핵심 요인 도출</li>
-              <li>기부 확률이 높은 잠재 기부자 <b>선별 모델</b> 구축</li>
-
-            </ul>
-          </div>
+        {/* 기술적 세부사항 */}
+        <div className="mb-6">
+          <h3 className="font-semibold mb-2">기술적 접근</h3>
+          <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
+            <li>피처 엔지니어링: 연령대, 성별, 지역, 과거 기부 이력, 소득수준, 교육수준 등</li>
+            <li>모델 비교: Random Forest, XGBoost, LightGBM, SVM 등 다양한 알고리즘 테스트</li>
+            <li>XAI: <b>SHAP</b> Summary/Dependence로 <b>주요 변수 식별</b></li>
+            <li>SHAP 기반 변수 중요도 분석 및 <b>기부 결정 요인</b> 도출</li>
+            <li>클래스 불균형 문제 해결을 위한 다양한 샘플링 기법 적용</li>
+            <li>교차 검증을 통한 모델의 일반화 성능 검증</li>
+          </ul>
         </div>
+
+        {/* 추가 분석 결과 */}
+        {/* <div className="mb-6">
+          <h3 className="font-semibold mb-2">주요 발견사항</h3>
+          <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
+            <li>연령대별 기부 패턴: 40-50대가 가장 높은 기부율을 보이며, 20-30대는 상대적으로 낮음</li>
+            <li>소득수준과 기부의 상관관계: 소득이 높을수록 기부 확률이 증가하지만, 일정 수준 이상에서는 포화</li>
+            <li>지역별 차이: 수도권과 지방 간 기부 문화의 차이를 확인</li>
+            <li>교육수준의 영향: 고등교육을 받은 그룹에서 기부 참여도가 높음</li>
+            <li>가족구성의 영향: 자녀가 있는 가구에서 기부 참여도가 상대적으로 높음</li>
+          </ul>
+        </div> */}
 
         <div className="absolute bottom-4 right-4 text-sm text-muted-foreground">
-          8
+          10
         </div>
       </div>
     </div>

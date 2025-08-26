@@ -4236,6 +4236,7 @@ html {
 
 .portfolio-page {
   page-break-after: always;
+  page-break-inside: avoid;
   background: #fff;
   width: 210mm;
   max-width: 210mm;
@@ -4249,6 +4250,19 @@ html {
   page-break-after: avoid;
 }
 
+/* 이미지와 제목이 같은 페이지에 유지되도록 하는 스타일 */
+.portfolio-page img {
+  max-width: 100%;
+  height: auto;
+  page-break-inside: avoid;
+}
+
+.portfolio-page h2,
+.portfolio-page h3 {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+}
+
 @media print {
   body {
     margin: 0;
@@ -4260,12 +4274,25 @@ html {
     max-width: none;
     box-shadow: none;
     page-break-after: always;
+    page-break-inside: avoid;
     margin: 0;
     padding: 20mm;
   }
 
   .portfolio-page:last-child {
     page-break-after: avoid;
+  }
+
+  .portfolio-page img {
+    max-width: 100%;
+    height: auto;
+    page-break-inside: avoid;
+  }
+
+  .portfolio-page h2,
+  .portfolio-page h3 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
   }
 
   .no-print {
@@ -4606,4 +4633,14 @@ html {
   20%, 50% {
     opacity: 0;
   }
+}
+
+/* PDF 출력 시 flex 레이아웃 강제 */
+.portfolio-page .flex-wrap {
+  flex-wrap: wrap !important;
+  flex-direction: row !important;
+}
+
+.portfolio-page .grid {
+  display: grid !important;
 }
