@@ -183,6 +183,15 @@ export function OnePageResume() {
               </div>
               <span className="text-xs text-muted-foreground">2023.08-2023.12</span>
             </div>
+
+            <div className="flex items-start justify-between">
+              <div>
+                <h4 className="font-semibold text-sm">국민은행 디지털 서포터즈</h4>
+                <p className="text-xs text-muted-foreground">신현동지점</p>
+              </div>
+              <span className="text-xs text-muted-foreground">2024.01-2024.02</span>
+            </div>
+
             <div className="flex items-start justify-between">
               <div>
                 <h4 className="font-semibold text-sm">Business Analytics & Social AI Lab</h4>
@@ -190,6 +199,7 @@ export function OnePageResume() {
               </div>
               <span className="text-xs text-muted-foreground">2024.03-2025.08</span>
             </div>
+
           </div>
         </CardContent>
       </Card>
