@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Mail, Phone, MapPin, Github, Linkedin, Calendar, Building, ExternalLink, Code, Database, Brain, TrendingUp, Users, Globe, MessageSquare, FileText, BarChart3, Sparkles, Network, CalendarClock, Workflow, Layers, Filter } from "lucide-react";
@@ -28,6 +28,21 @@ const StatCard = ({ icon: Icon, label, value, sub }: { icon: any; label: string;
 );
 
 export function Portfolio() {
+  useEffect(() => {
+    const GA_ID = 'G-WBPFYQR622';
+    const existing = document.querySelector(`script[src=\"https://www.googletagmanager.com/gtag/js?id=${GA_ID}\"]`);
+    if (!existing) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(script);
+    }
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    const gtag = (...args: any[]) => { (window as any).dataLayer.push(args); };
+    (window as any).gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }, []);
   return (
     <div className="portfolio-container">
       {/* 프로젝트 1: PwC SCM GenAI */}

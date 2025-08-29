@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Mail, Phone, MapPin, Github, Linkedin, Calendar, Building } from "lucide-react";
 import profileImage from "../assets/1405a83f9be0643a167da61d5d48e7c0fc280b6f.png";
 
 export function OnePageResume() {
+  useEffect(() => {
+    const GA_ID = 'G-WBPFYQR622';
+    const existing = document.querySelector(`script[src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"]`);
+    if (!existing) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(script);
+    }
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    const gtag = (...args: any[]) => { (window as any).dataLayer.push(args); };
+    (window as any).gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }, []);
   return (
     <div className="portfolio-page" style={{ minHeight: '297mm', padding: '12mm' }}>
       {/* 헤더 섹션 */}
