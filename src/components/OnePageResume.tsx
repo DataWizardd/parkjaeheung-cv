@@ -114,7 +114,7 @@ export function OnePageResume() {
               <h4 className="font-semibold text-xs">설명가능한 인공지능 활용 서울시 지하철 혼잡도 예측과 정책적 의사결정 지원을 위한 비즈니스 애널리틱스</h4>
               <Badge variant="outline" className="text-xs">한국빅데이터학회</Badge>
             </div>
-            <p className="text-xs text-muted-foreground mb-2">
+            <p className="text-sm text-muted-foreground mb-2">
               Random Forest 알고리즘으로 95% 이상 미래 혼잡도 예측 성능 달성 및 SHAP 알고리즘을 통해 비즈니스 인사이트 도출
             </p>
           </div>
@@ -124,7 +124,7 @@ export function OnePageResume() {
               <h4 className="font-semibold text-sm">딥러닝과 은닉 마르코프 모델을 연계한 연속적인 손 제스처 적출에 관한 연구</h4>
               <Badge variant="outline" className="text-xs">정보과학회 컴퓨팅의 실제 논문지</Badge>
             </div>
-            <p className="text-xs text-muted-foreground mb-2">
+            <p className="text-sm text-muted-foreground mb-2">
               LSTM Autoencoder로 특징을 추출하고, Gaussian HMM 기반 패턴 인식과 임계치 모델 결합하여 98.08% 인식률과 5.60% 단어오류율 달성
             </p>
           </div>
@@ -134,7 +134,7 @@ export function OnePageResume() {
               <h4 className="font-semibold text-sm">이벤트 지표와 감성 분석을 결합한 환율 예측</h4>
               <Badge variant="outline" className="text-xs">투고 중</Badge>
           </div>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-sm text-muted-foreground">
                CNN-LSTM 기반 딥러닝 알고리즘으로 MSE=47.71, MAPE=0.39% 달성
             </p>
           </div>
