@@ -134,7 +134,7 @@ export function OnePageResume() {
               <h4 className="font-semibold text-sm">이벤트 지표와 감성 분석을 결합한 환율 예측</h4>
               <Badge variant="outline" className="text-xs">투고 중</Badge>
           </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground mb-2">
                CNN-LSTM 기반 딥러닝 알고리즘으로 MSE=47.71, MAPE=0.39% 달성
             </p>
           </div>
