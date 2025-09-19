@@ -124,7 +124,7 @@ export function Portfolio() {
 
             <h3 className="font-semibold mb-2">프로젝트 개요</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              서울 지하철 1-8호선의 혼잡도를 예측하는 머신러닝 모델을 개발했습니다. 
+              서울 지하철 1-8호선의 혼잡도를 예측하는 AI 모델을 구축했습니다. 
               시간대별 승하차 인원, 환승 정보, 날씨 데이터 등을 활용하여 95% 이상의 예측 정확도를 달성했으며,
               SHAP 알고리즘을 통해 혼잡도에 영향을 미치는 주요 요인들을 분석했습니다.
             </p>
@@ -208,9 +208,9 @@ export function Portfolio() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Brain className="w-6 h-6 text-red-500" />
-              <h2 className="text-xl font-bold">연속적인 손 제스처 적출 연구</h2>
+              <h2 className="text-xl font-bold">딥러닝과 은닉 마르코프 모델을 연계한 연속적인 손 제스처 적출에 관한 연구</h2>
             </div>
-            <Badge variant="outline" className="mb-3">한국정보과학회 게재 예정</Badge>
+            <Badge variant="outline" className="mb-3">한국정보과학회 게재</Badge>
             
             <h3 className="font-semibold mb-2">주요 기술</h3>
             <div className="flex flex-wrap gap-1 mb-4">
@@ -320,7 +320,7 @@ export function Portfolio() {
               <TrendingUp className="w-6 h-6 text-indigo-500" />
               <h2 className="text-xl font-bold">환율 예측</h2>
             </div>
-            <Badge variant="outline" className="mb-3">투고 예정</Badge>
+            <Badge variant="outline" className="mb-3">투고 중</Badge>
             
             <h3 className="font-semibold mb-2">주요 기술</h3>
             <div className="flex flex-wrap gap-1 mb-4">
@@ -644,7 +644,7 @@ export function Portfolio() {
 
             <h3 className="font-semibold mb-2">프로젝트 개요</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              한국의 주요 <b>KTX 5개 노선</b>(경부·경전·동해·전라·호남)의 <b>월별 승차 수요</b>를 예측하는 다중 모델 시스템을 구축했습니다.
+              한국의 주요 <b>KTX 5개 노선</b>(경부·경전·동해·전라·호남)의 <b>월별 승차 수요</b>를 예측하는 AI 모델을 구축했습니다.
               노선별 특성에 맞춰 머신러닝/딥러닝 6종을 비교하고 <b>Best Model</b>을 선택하여 예측 정확도를 높였습니다.
             </p>
           </div>
@@ -693,7 +693,7 @@ export function Portfolio() {
             <h3 className="font-semibold mb-2">비즈니스 인사이트</h3>
             <ul className="text-sm space-y-2 list-disc list-inside text-muted-foreground">
               <li>노선별 계절·경제 지표 효과 반영으로 <b>운행 편성/좌석 배분</b> 최적화 근거 제공</li>
-              <li>MAPE 2%대 성능을 바탕으로 <b>수요 급증/감소 조기 탐지</b> 및 영업 계획 수립 지원</li>
+              <li>MAPE 2%대 성능을 바탕으로 <b>수요 급증/감소 조기 탐지</b> </li>
             </ul>
           </div>
         </div>

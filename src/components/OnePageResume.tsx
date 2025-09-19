@@ -168,6 +168,7 @@ export function OnePageResume() {
           <CardContent className="space-y-2">
             <div className="space-y-1">
               <div className="flex items-center justify-between">
+                
               <span className="text-sm font-medium">ADsP</span>
               <span className="text-xs text-muted-foreground">2024.11</span>
               </div>
@@ -184,6 +185,25 @@ export function OnePageResume() {
         </Card>
       </div>
 
+      {/* Publication */}
+      <Card className="mb-4">
+        <CardHeader className="pb-1">
+          <CardTitle className="text-base">Publication</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-3">
+            <div>
+              <h4 className="font-semibold text-sm">설명가능한 인공지능 활용 서울시 지하철 혼잡도 예측과 정책적 의사결정 지원을 위한 비즈니스 애널리틱스</h4>
+              <p className="text-xs text-muted-foreground">한국빅데이터학회 · 2025년 6월</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-sm">딥러닝과 은닉 마르코프 모델을 연계한 연속적인 손 제스처 적출에 관한 연구</h4>
+              <p className="text-xs text-muted-foreground">정보과학회 컴퓨팅의 실제 논문지(KTCP) · 2025년 9월</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* 기타 경험 */}
       <Card>
         <CardHeader className="pb-1">
@@ -191,13 +211,16 @@ export function OnePageResume() {
         </CardHeader>
         <CardContent>
           <div className="space-y-3">
-            <div className="flex items-start justify-between">
+
+          <div className="flex items-start justify-between">
               <div>
-                <h4 className="font-semibold text-sm">캘리포니아 주립대 교환학생</h4>
-                
+                <h4 className="font-semibold text-sm">Business Analytics & Social AI Lab</h4>
+                <p className="text-xs text-muted-foreground">KTX 수요 예측, 기부자 특성 분석 프로젝트 진행</p>
               </div>
-              <span className="text-xs text-muted-foreground">2023.08-2023.12</span>
+              <span className="text-xs text-muted-foreground">2024.03-2025.08</span>
             </div>
+
+
 
             <div className="flex items-start justify-between">
               <div>
@@ -209,10 +232,10 @@ export function OnePageResume() {
 
             <div className="flex items-start justify-between">
               <div>
-                <h4 className="font-semibold text-sm">Business Analytics & Social AI Lab</h4>
-                <p className="text-xs text-muted-foreground">KTX 수요 예측, 기부자 특성 분석 프로젝트 진행</p>
+                <h4 className="font-semibold text-sm">캘리포니아 주립대 교환학생</h4>
+                
               </div>
-              <span className="text-xs text-muted-foreground">2024.03-2025.08</span>
+              <span className="text-xs text-muted-foreground">2023.08-2023.12</span>
             </div>
 
           </div>
