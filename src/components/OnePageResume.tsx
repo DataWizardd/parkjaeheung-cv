@@ -111,7 +111,7 @@ export function OnePageResume() {
         <CardContent className="space-y-3">
           <div>
             <div className="flex items-start justify-between mb-1">
-              <h4 className="font-semibold">설명가능한 인공지능 활용 서울시 지하철 혼잡도 예측과 정책적 의사결정 지원을 위한 비즈니스 애널리틱스</h4>
+              <h4 className="font-semibold text-sm">설명가능한 인공지능 활용 서울시 지하철 혼잡도 예측과 정책적 의사결정 지원을 위한 비즈니스 애널리틱스</h4>
               <Badge variant="outline" className="text-xs">한국빅데이터학회</Badge>
             </div>
             <p className="text-sm text-muted-foreground mb-2">
@@ -121,7 +121,7 @@ export function OnePageResume() {
 
           <div>
             <div className="flex items-start justify-between mb-1">
-              <h4 className="font-semibold">딥러닝과 은닉 마르코프 모델을 연계한 연속적인 손 제스처 적출에 관한 연구</h4>
+              <h4 className="font-semibold text-sm">딥러닝과 은닉 마르코프 모델을 연계한 연속적인 손 제스처 적출에 관한 연구</h4>
               <Badge variant="outline" className="text-xs">정보과학회 컴퓨팅의 실제 논문지</Badge>
             </div>
             <p className="text-sm text-muted-foreground mb-2">
@@ -131,7 +131,7 @@ export function OnePageResume() {
 
           <div>
           <div className="flex items-start justify-between mb-1">
-              <h4 className="font-semibold mb-1">이벤트 지표와 감성 분석을 결합한 환율 예측</h4>
+              <h4 className="font-semibold text-sm mb-1">이벤트 지표와 감성 분석을 결합한 환율 예측</h4>
               <Badge variant="outline" className="text-xs">투고 중</Badge>
           </div>
             <p className="text-sm text-muted-foreground">
