@@ -121,7 +121,7 @@ export function OnePageResume() {
 
           <div>
             <div className="flex items-start justify-between mb-1">
-              <h4 className="font-semibold text-xs">딥러닝과 은닉 마르코프 모델을 연계한 연속적인 손 제스처 적출에 관한 연구</h4>
+              <h4 className="font-semibold text-sm">딥러닝과 은닉 마르코프 모델을 연계한 연속적인 손 제스처 적출에 관한 연구</h4>
               <Badge variant="outline" className="text-xs">정보과학회 컴퓨팅의 실제 논문지</Badge>
             </div>
             <p className="text-xs text-muted-foreground mb-2">
@@ -131,7 +131,7 @@ export function OnePageResume() {
 
           <div>
           <div className="flex items-start justify-between mb-1">
-              <h4 className="font-semibold text-xs mb-1">이벤트 지표와 감성 분석을 결합한 환율 예측</h4>
+              <h4 className="font-semibold text-sm">이벤트 지표와 감성 분석을 결합한 환율 예측</h4>
               <Badge variant="outline" className="text-xs">투고 중</Badge>
           </div>
             <p className="text-xs text-muted-foreground">
