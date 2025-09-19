@@ -111,8 +111,8 @@ export function OnePageResume() {
         <CardContent className="space-y-3">
           <div>
             <div className="flex items-start justify-between mb-1">
-              <h4 className="font-semibold">지하철 승강장 혼잡도 예측</h4>
-              <Badge variant="outline" className="text-xs">한국빅데이터학회지 게재</Badge>
+              <h4 className="font-semibold">설명가능한 인공지능 활용 서울시 지하철 혼잡도 예측과 정책적 의사결정 지원을 위한 비즈니스 애널리틱스</h4>
+              <Badge variant="outline" className="text-xs">한국빅데이터학회지 · 2025년 6월</Badge>
             </div>
             <p className="text-sm text-muted-foreground mb-2">
               Random Forest 알고리즘으로 95% 이상 미래 혼잡도 예측 성능 달성 및 SHAP 알고리즘을 통해 비즈니스 인사이트 도출
@@ -121,8 +121,8 @@ export function OnePageResume() {
 
           <div>
             <div className="flex items-start justify-between mb-1">
-              <h4 className="font-semibold">딥러닝과 HMM을 연계한 연속 손 제스처 적출 연구</h4>
-              <Badge variant="outline" className="text-xs">학회 게재 예정</Badge>
+              <h4 className="font-semibold">딥러닝과 은닉 마르코프 모델을 연계한 연속적인 손 제스처 적출에 관한 연구</h4>
+              <Badge variant="outline" className="text-xs">정보과학회 컴퓨팅의 실제 논문지(KTCP) · 2025년 9월</Badge>
             </div>
             <p className="text-sm text-muted-foreground mb-2">
               LSTM Autoencoder로 특징을 추출하고, Gaussian HMM 기반 패턴 인식과 임계치 모델 결합하여 98.08% 인식률과 5.60% 단어오류율 달성
@@ -185,24 +185,7 @@ export function OnePageResume() {
         </Card>
       </div>
 
-      {/* Publication */}
-      <Card className="mb-4">
-        <CardHeader className="pb-1">
-          <CardTitle className="text-base">Publication</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-3">
-            <div>
-              <h4 className="font-semibold text-sm">설명가능한 인공지능 활용 서울시 지하철 혼잡도 예측과 정책적 의사결정 지원을 위한 비즈니스 애널리틱스</h4>
-              <p className="text-xs text-muted-foreground">한국빅데이터학회 · 2025년 6월</p>
-            </div>
-            <div>
-              <h4 className="font-semibold text-sm">딥러닝과 은닉 마르코프 모델을 연계한 연속적인 손 제스처 적출에 관한 연구</h4>
-              <p className="text-xs text-muted-foreground">정보과학회 컴퓨팅의 실제 논문지(KTCP) · 2025년 9월</p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+
 
       {/* 기타 경험 */}
       <Card>
